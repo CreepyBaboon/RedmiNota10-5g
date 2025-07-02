@@ -34,7 +34,7 @@ jobs:
 
       # Step 4: Upload unpacked files as artifact
       - name: Upload unpacked files
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: unpacked-boot-img
           path: |
