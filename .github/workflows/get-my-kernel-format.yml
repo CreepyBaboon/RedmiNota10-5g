@@ -44,5 +44,3 @@ jobs:
             header
             *.img
 
-          # Run magiskboot and capture output
-          ./magiskboot unpack boot.img
