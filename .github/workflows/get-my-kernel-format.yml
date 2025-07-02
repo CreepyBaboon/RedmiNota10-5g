@@ -33,6 +33,19 @@ jobs:
         run: |
           # Ensure magiskboot is executable
           chmod +x magiskboot
+          
+      # Step 4: Upload unpacked files as artifact
+      - name: Upload unpacked files
+        uses: actions/upload-artifact@v3
+        with:
+          name: unpacked-boot-img
+          path: |
+            ramdisk.cpio
+            kernel
+            dtb
+            header
+            *  # ou todos os arquivos extraídos pelo magiskboot
+
 
           # Run magiskboot and capture output
           ./magiskboot unpack boot.img
